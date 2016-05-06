@@ -9,3 +9,9 @@ def login_index(request):
 
 def register_index(request):
     return render(request, 'accounts/register.html')
+
+
+def register_try(request):
+    if request.method == 'POST':
+        name = request.POST.get('name')
+        print(name)
